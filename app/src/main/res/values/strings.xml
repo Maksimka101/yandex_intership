@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Git repositories</string>
+    <string name="search">Search</string>
+    <string name="nothing">Nothing to show</string>
+    <string name="hint_search">Enter repository name here</string>
+    <string name="hint_language">Enter language</string>
+    <string name="default_language">kotlin</string>
+    <string name="default_repository">yandex</string>
+</resources>

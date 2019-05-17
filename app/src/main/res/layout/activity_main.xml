@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity"
+        android:orientation="vertical">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:hint="@string/hint_search"
+                    android:inputType="text"
+                    android:text="@string/default_repository"
+                    android:autofillHints="@string/hint_search"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repositoryNameFolder"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="text"
+                    android:id="@+id/repositoryLanguageField"
+                    android:hint="@string/hint_language"
+                    android:text="@string/default_language"
+                    android:autofillHints="@string/default_language"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:rotation="8"
+                android:layout_gravity="center"
+                android:id="@+id/search"
+                android:text="@string/search"
+                android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/noResults"
+            android:layout_height="wrap_content"
+            android:text="@string/nothing"
+            android:gravity="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical"/>
+
+</LinearLayout>
